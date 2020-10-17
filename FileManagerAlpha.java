@@ -22,12 +22,13 @@ public static FileTime getCreationTime(File file) throws IOException {
 	FileTime fileTime=view.creationTime();
 	
 // also available view.lastAccessTine and view.lastModifiedTime
-	
 
 	return fileTime;
 }
 public static void main(String[] args) throws IOException {
 	File file = new File("C:\\Filetest.txt");
+	FileManagerAlpha FileCreationTime;
+	
 	System.out.println(file + " creation time :" + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
 			.format(FileCreationTime.getCreationTime(file).toMillis()));
 	Instant instantLastmodified = Instant.ofEpochMilli(file.lastModified());
