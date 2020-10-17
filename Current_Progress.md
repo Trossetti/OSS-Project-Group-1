@@ -13,6 +13,9 @@ Ideas in the Running!
 <p> As far as the base text in the files I created. I am going through the text and modifying as I read it and ajusting it. </p>
 <p> So as soon as we can set up the program that would be nice. Meanwhile I am trying to get the Ldap code for accessing the server done. </p>
 
+<p> I found a better version of the File Manger created in Java by someone else. Since we don't need the GUI we can delete the code for it and maybe salvage the rest. </p>
+<p> Still looking for the information to apply access and connection to a LDAP Server. </p>
+
 
 
 </body>
