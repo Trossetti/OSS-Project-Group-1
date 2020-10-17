@@ -20,12 +20,13 @@ public static FileTime getCreationTime(File file) throws IOException {
 	BasicFileAttributes view = Files.getFileAttributeView(p, BasicFileAttributeView.class)
 			.readAttributes();
 	FileTime fileTime=view.creationTime();
+	
 // also available view.lastAccessTine and view.lastModifiedTime
 
 	return fileTime;
 }
 public static void main(String[] args) throws IOException {
-	File file = new File("C:\\CiprianAssignment.txt");
+	File file = new File("C:\\Filetest.txt");
 	System.out.println(file + " creation time :" + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
 			.format(FileCreationTime.getCreationTime(file).toMillis()));
 	Instant instantLastmodified = Instant.ofEpochMilli(file.lastModified());
@@ -35,7 +36,7 @@ public static void main(String[] args) throws IOException {
 	System.out.println("Name = " + file.getName());
 	System.out.println("Lenght = " + file.length() + " Bytes");
 	
-	File newDirectory = new File("C:\\Melisa");
+	File newDirectory = new File("C:\\User");
 	try {
 		if(!newDirectory.exists())
 		{
@@ -50,7 +51,7 @@ public static void main(String[] args) throws IOException {
 	} catch (Exception e) {
 		System.out.println("Couldn't create a directory called " + newDirectory.getName());
 		}try{
-			File afile =new File("C:\\Melisa\\Nature.jpg");
+			File afile =new File("C:\\User\\Image.jpg");
 			if(afile.renameTo(new File("C:\\test\\" + afile.getName()))){
 				System.out.println("File is moved successful!");
 				}else{
@@ -59,8 +60,8 @@ public static void main(String[] args) throws IOException {
 			}catch(Exception e){
 				e.printStackTrace();
 				}
-		File oldfile = new File("C:\\Melisa\\Rahela.txt");
-		File newfile = new File("C:\\Melisa\\Ciprian.txt");
+		File oldfile = new File("C:\\User\\File1.txt");
+		File newfile = new File("C:\\User\\File2.txt");
 		
 		if(!oldfile.exists())
 		{
