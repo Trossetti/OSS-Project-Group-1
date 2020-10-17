@@ -18,3 +18,10 @@ public class BasicReadFile {
     }
   }
 }
+
+
+/* The process of creating a file in said directory.
+As this is just basic syntax. I am hoping to find a way to utalize it better.
+
+
+*/
